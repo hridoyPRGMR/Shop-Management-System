@@ -1,0 +1,47 @@
+{% extends "users/base.html" %} {% block title %} Login Page {% endblock title%}
+{% block content %} {% if form.errors %}
+<div class="" role="alert">
+  <div id="form_errors">
+    {% for key, value in form.errors.items %}
+    <strong>{{ value }}</strong>
+    {% endfor %}
+  </div>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endif %}
+
+<div class="signupMain">
+  <div class="signup">
+
+    <div class="sub">
+        <form method="POST">
+            {% csrf_token %}
+        
+            <label class="small mb-1">Username</label>
+            {{ form.username }}
+        
+            <label class="small mb-1" style="margin-top: 15px;">Password</label>
+            {{ form.password }}   
+        
+          <!-- Add a Remember me functionality -->
+            {{ form.remember_me }}
+        
+            <label> Remember me</label><br>
+            <button name="login" class="btn" id="login">Sign in</button>
+            </form>
+            
+            <div class="no_account">
+                <a style="font-size:medium; color: white;" href="{% url 'users-register' %}">Don't have an account yet? Go to signup</a><br/>
+            </div>
+            
+    </div>
+  </div>
+  <div class="signupText">
+    <h1>Manage Your Business</h1>
+    <p>The biggest sources of opportunity are collaboration and partnership. And today, with digital communication, there is more of that everywhere. We need to expose ourselves to that as a matter of doing business.</p>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,103 @@
+{% extends "users/base.html" %}
+{% block title %} Home Page {% endblock title%}
+{% block content %}
+
+<div class="table-details">
+
+    {% if sel_item %}
+
+        <form class="form" action="{% url 'update_item' sel_item.id %}" method="POST">
+            {% csrf_token %}
+            
+            <div class="input">
+                <label for="">Product Name</label><br>
+                <input  type="text" class="" placeholder="product name" value="{{sel_item.name}}" name='name'>
+            </div>
+
+            <div class="input">
+                <label for="">Brand Name</label><br>
+                <input type="text" placeholder="E.g Pran" value="{{sel_item.brandname}}" name="brandname">
+            </div>
+
+            <div class="input">
+                <label for="">Price</label><br>
+                <input type="text" placeholder="E.g 50tk" value="{{sel_item.price}}" name="price">
+            </div>
+
+            <div class="input">
+                <label for="">Description</label><br>
+                <input type="text" id="" placeholder="describe" value="{{sel_item.describe}}" name='describe'>
+            </div>
+
+            <div>
+                <button type="submit">Update</button>
+            </div>
+        </form>
+
+    {% else %}
+
+    <form class="form" action="{% url 'users-additem' %}" method="POST">
+        {% csrf_token %}
+        <div class="input">
+            <label for="">Product Name</label><br>
+            <input  type="text" class="" placeholder="product name" name='name'>
+        </div>
+        <div class="input">
+            <label for="">Brand Name</label><br>
+            <input type="text" placeholder="E.g Pran" name="brandname">
+        </div>
+        <div class="input">
+            <label for="">Price</label><br>
+            <input type="text" placeholder="E.g 50tk" name="price">
+        </div>
+        <div class="input">
+            <label for="">Description</label><br>
+            <input type="text" id="" placeholder="describe" name='describe'>
+        </div>
+        <div>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+    
+    {% endif %}
+
+    <div class="table">
+        <table class="tab">
+            <thead>
+                <tr>
+                
+                    <th>Serial no</th>
+                    <th>Product Name</th>
+                    <th>Brand Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Edit </th>
+                    <th>Delete </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in item_list %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.brandname}}</td>
+                    <td>{{i.price}}</td>
+                    <td>{{i.describe}}</td>
+                   
+                    <td>
+                        <a  href="{% url 'edit_item' i.id%}"><button class="edit">Edit</button></a>
+
+                    </td>
+                    <td>
+                        <a  href="{% url 'delete_item' i.id %}"><button class="del">Delete</button></a>
+                    </td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+{% endblock content %}

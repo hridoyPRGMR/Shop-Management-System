@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.dash:hover{
+    border-radius: 40px;
+    background-color: rgba(249, 249, 250, 0.084);
+}
+
+.home{
+    background-color: rgb(44, 219, 204);
+    display: flex;
+    align-items: center;
+    min-height: 10vh;
+}
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 25px;
+  }
+  .waviy span {
+    font-family: 'Alfa Slab One', cursive;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    animation: waviy 2s infinite;
+    animation-delay: calc(.1s * var(--i));
+    
+  }
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(3)
+    }
+    20% {
+      transform: translateY(-10px)
+    }
+  }
+
+.welcomePage{
+    background: url("../img/cart3.jpg");
+    background-position:top;
+    background-size: 100%;
+    
+}
+
+.welcomePage .welcomePage2{
+    background: rgba(0, 0, 0, 0.146);
+    display:block;
+    padding-top: 100px;
+    padding-bottom: 300px;
+}
+
+.welcomePage .welcomePage2 .text{
+    background-color: rgba(0, 0, 0, 0.384);
+    margin-left: 33%;
+    padding: 20px;
+    text-align: justify;
+    font-weight: 800;
+    width: 600px;
+    height: 250px;
+    font-size: larger;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 20px 10px 20px 10px;
+}
+
+.welcomePage .welcomePage2 .btn{
+    padding-left: 42%;
+    padding-top: 20px;
+}
+.welcomePage .welcomePage2 button{
+    border: none;
+    border-radius: 20px;
+    background-color:rgba(8, 216, 105, 0.874);
+}
+.welcomePage .welcomePage2 button:hover{
+    color: black;
+    background-color: white;
+    color: rgba(8, 216, 105, 0.874);;
+}
+
+.welcome{
+    padding-top: 25px;
+    padding-left: 28px;
+}
+
+.welcome .animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    rgb(44, 219, 204) 0%,
+    rgb(212, 104, 45) 29%,
+    rgb(255, 0, 0) 67%,
+    orange 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-emphasis-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+    display: flex;
+      font-size: 17px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+
+.container1{
+    margin-top: 0px;
+    display: flex;
+}
+nav{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 80vh;
+    left: 0;
+    width: 280px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.573);
+    background-color: white;
+    margin-left: 20px;
+}
+.logo{
+    text-align: center;
+    display: flex;
+    margin: 10px 0 0 10px;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    
+}
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+a{  
+    position: relative;
+    color: black;
+    font-size: 14px;
+    display: table;
+    width: 280px;
+    padding: 10px;
+    transition-duration: 0.4s;
+}
+
+nav .fas{
+    position: relative;
+    height: 40px;
+    width: 70px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+
+}
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px; 
+    
+}
+
+
+.lg{
+    position:absolute;
+    bottom: 0px;
+}
+/* CARD */
+.main{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+.top{
+    color:rgb(212, 104, 45);
+    margin-left: 20px;
+    display: flex;
+    width: 100%;
+}
+.main .top h1{
+    margin-left: 90px;
+}
+.product{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+.product .card{
+    
+    width: 25%;
+    margin: 5px;
+    margin-left: 30px;
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.612);
+}
+.product .card h3{
+    margin: 10px;
+    text-transform: capitalize;
+}
+.product .card button{
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.356);
+    font-size: 20px;
+    border: none;
+    background-color: rgb(44, 219, 204);
+    color: white;
+    padding: 7px 15px;
+    border-radius: 10px;
+     margin-top: 15px;
+     cursor: pointer;
+}
+.product .card button:hover{
+    background: orange;
+}
+
+/* profile */
+
+.profile{
+    padding-top: 30px;
+}
+
+.profileInfo{
+   margin-left:600px;
+   font-size: 20px;
+}
+
+.profileInfo img{
+    margin-left: 15%;
+}
+
+/*logout*/
+
+.logout{
+    margin-right: 20px;
+    margin-top: 200px;
+    text-align: center;
+}
+
+/*sigin*/
+
+.signupMain{
+    background: url("../img/cart3.jpg");
+    background-color: rgba(0, 0, 0, 0.384);
+    background-size: 100%;
+    background-position: top;
+    display: flex;
+    padding-bottom: 300px;
+}
+.signupText{
+    margin-top: 120px;
+    margin-left: 50px;
+    background-color: rgba(5, 5, 5, 0.477);    
+    height: 270px;
+    padding: 20px;
+    width: 780px;
+    color: white;
+    font-size: 30px;
+}
+.signupText p{
+    text-align: justify;
+    font-family:sans-serif;
+}
+
+.signup{
+    margin-left: 120px;
+    margin-top: 80px;
+    border-radius: 30px 10px 30px 10px;
+    background-color:rgba(23, 201, 183, 0.509);
+    justify-content: center;
+    height:350px ;
+    width: 400px;
+}
+.signup .sub{
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.signup .sub .btn{
+    font-size: medium;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    margin-top: 4px;
+}
+.signup .sub .btn:hover{
+    background-color: white;
+    color: black;
+}
+.signup .sub a{
+    padding-top: 25px;
+    color: black;
+    margin: auto;
+}
+
+/*add product*/
+.table-details{
+    padding-top: 30px;
+    display: grid;
+    justify-content: center;
+}
+
+.table-details .form{
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height:150px;
+    width: 100%;
+    background-color: rgb(23, 201, 183);
+    padding-top: 30px;
+    border-radius: 10px 35px 10px 35px;
+}
+.table-details .form input{
+    width: 200px;
+    padding: 5px;
+    border: none;
+    margin-left: 10px;
+}
+
+.table-details .form .input label{
+    margin-left: 10px;
+}
+
+.table-details .form button{
+    margin:35px 0px 0px 65px;
+    border: none;
+    color: white;
+    padding:5px 20px 5px 20px;
+    background-color:green  ;
+}
+
+
+.table{
+    margin-top: 50px;
+}
+
+.tab thead tr th{
+    border: 1px solid rgb(8, 56, 51);
+    padding: 10px;
+    background-color: rgb(23, 201, 183);
+    text-align: center;
+}
+.tab tbody tr td{
+    border: 1px solid rgb(23, 201, 183);
+    padding: 10px;
+    text-align: center;
+}
+.tab tbody tr:hover{
+    background-color: bisque;
+}
+
+.tab tbody tr .edit{
+    background-color:rgb(23, 201, 183);
+    padding: 7px 20px 7px 20px;
+    border: none;
+}
+.tab tbody tr .del{
+    color: white;
+    background-color:rgb(201, 23, 23);
+    padding: 7px 20px 7px 20px;
+    border: none;
+}
+
+.product2{
+    margin-top: 30px;
+   display: grid;
+   justify-content: center;
+}
+
+.tab-2{
+    font-size: larger;
+    width: 100%;
+}
+
+
+.tab-2 thead tr th{
+    border: 1px none black;
+    padding: 30px 80px 30px 80px;
+    text-align: center;
+    background-color: aqua;
+}
+
+.tab-2 tbody tr td{
+    border: 1px solid aqua;
+    padding: 10px;
+    text-align: center;
+}
+.tab-2 tbody tr:hover{
+    background-color: bisque;
+}
+
+/*sell product*/
+.table-details2{
+    margin-top: 30px;
+    font-size: larger;
+    display: grid;
+    justify-content: center;
+}
+
+.table-details2 .form2{
+    color: white;
+    display: flex;
+    height: 150px;
+    width: 100%;
+    background-color:rgb(23, 201, 183);
+    border-radius: 35px 15px 35px 15px;
+    padding: 15px;
+}
+
+.table-details2 .form2 .input2{
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.table-details2 .form2 .input2 input{
+    padding: 5px;
+}
+
+.table-details2 .form2 button{
+    margin-top: 45px;
+    color:white;
+    padding: 0px 25px 0px 25px;
+    background-color: rgb(32, 159, 32);
+    border: none;
+}
+
+.table-details2 .table2{
+    font-size: larger;
+    margin-left: 120px;
+}
+
+.table-details2 .table2 .tab2 tr th{
+    text-align: center;
+    padding: 20px 40px 20px 40px;
+    border: 1px none;
+    background-color: aqua;
+}
+
+.table-details2 .table2 .tab2 tr td{
+    text-align: center;
+    border: 1px solid aqua;
+}
+
+.table-details2 .table2 .tab2 tr button{
+    color: white;
+    padding: 0px 15px 0px 15px;
+    background-color:rgb(240, 11, 179);
+}
+
+.tk{
+    padding: 20px 0px 20px 0px;
+}
+
+/*brand*/
+
+.hudai2{
+    margin-top: 30px;
+    margin-left: 125px;
+    
+}
+
+.brands ul{
+    padding: 0;
+    margin: 0;
+}
+.brands ul li{
+    list-style: none;
+    display: inline-block;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+    margin: 4px;
+    padding: 7px;
+    background-color:aliceblue;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.749);
+    border-radius: 10%;
+}
+.brands ul li a img{
+    height: 180px;
+    width: 240px;
+}
+.brands ul li:hover{
+background-color: rgba(112, 109, 107, 0.475);
+transition: .4s;
+}
+
+/*vendor*/
+
+.table-box
+{
+    margin: 50px auto;
+}
+
+.table-row{
+    display: table;
+    width: 80%;
+    margin: 10px auto;
+    font-family: sans-serif;
+    background: transparent;
+    padding: 12px 0;
+    color: #555;
+    font-size: 13px;
+    box-shadow: 0 1px 4px 0px rgba(0,0,50,0.3);
+}
+.table-head{
+    background: #8665f7;
+    box-shadow: none;
+    color: #fff;
+    font-weight: 600;
+}
+.table-head .table-cell{
+    border-right: none;
+}
+.table-cell{
+    display: table-cell;
+    width: 20%;
+    text-align: center;
+    padding: 4px 0;
+    border-right: 1px solid #d6d4d4;
+    vertical-align: middle;
+}
+.first-cell{
+    text-align: left;
+    padding-left: 10px;
+}
+.last-cell{
+    border-right: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .table-row {
+    font-size: 11px;
+  }
+}
+
+/*profile*/
+
+.profile{
+    font-size: larger;
+    color: white;
+    display: grid;
+    justify-content: center;
+}
+
+.profile .form{
+    padding: 30px;
+    background-color: rgb(23, 201, 183);
+    border-radius: 10px;
+}
+
+.profile .form .img{
+    display: flex;
+    margin-left: 35px;
+}
+
+.profile .form img{
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+.profile .form .img h2{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.profile .form .baton{
+    color: white;
+    border: none;
+    background-color: rgb(43, 174, 54);
+    padding: 10px 20px 10px 20px;
+}
+
+/*register*/
+
+.createMain{
+    background: url("../img/management.jpg");
+    background-position: bottom;
+    background-size: cover;
+}
+
+.create{
+    
+    padding-top: 40px;
+    color: white;
+    font-size: larger;
+    margin-left: 550px;
+    width: 500px;
+    display: grid;
+    justify-content: center;
+    background-color: rgba(23, 201, 183, 0.233);
+    border-radius: 20px;
+}
+
+.create h3{
+    padding-top: 15px;
+}
+
+.create .account{
+    padding-top: 10px;
+}
+
+.create .account p{
+    padding-left: 50px;
+}
+
+.create .account button{
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    margin-left: 9  0px;
+    padding: 10px 30px 10px 30px;
+    background-color: rgba(29, 157, 212, 0.349);
+}
+
+.welcomePage{
+    background-color: #8665f7;
+}
+
+/*change password*/
+.change{
+    height: 700px;
+    width: 100%;
+    background-image:url("../img/password.jpg");
+    background-position: bottom;
+    background-size: cover;
+}
+.change .change2{
+    margin-top: -50px;
+    padding-bottom: 110px;
+    background-color: rgba(0, 0, 0, 0.422);
+}
+
+.change2 .changeText{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: white;
+}

@@ -1,0 +1,64 @@
+{% extends "users/base.html" %}
+{% block title %} Home Page {% endblock title%}
+{% block content %}
+
+<div class="table-details2">
+    {% for message in messages %}
+    <p class="">{{message}}</p>
+    {% endfor %}
+    <div>   
+        <form class="form2" action="{% url 'users-sellitem' %}" method="POST">
+            {% csrf_token %}
+            <div class="input2">
+                <label for="">Product Name</label>
+                <input type="text" placeholder="E.g Juice" name="pname">
+            </div>
+            <div class="input2">
+                <label for="">Price</label>
+                <input type="text" placeholder="E.g 50tk" name="pprice">
+            </div>
+            <div class="input2">
+                <label for="">Date</label>
+                <input type="text" placeholder="E.g 20\05\2023" name="date">
+            </div>
+            
+            <div>
+                <button type="submit">Save</button>
+            </div>
+            
+        </form>    
+    </div>
+    <div>
+        <h1 class="tk">Total Sell Amount: {{total}}</h1>
+    </div>
+    <div class="table2">
+        <table class="tab2">
+            <thead>
+                <tr>
+                    <th>Sell No</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for j in sell_list %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{j.pname}}</td>
+                    <td>{{j.pprice}}</td>
+                    <td>{{j.date}}</td>
+                    <td>
+                        <a href="{% url 'delete_sell' j.id %}"><button>delete</button></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+{% endblock content %}

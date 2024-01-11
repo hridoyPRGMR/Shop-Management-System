@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+body{
+    background: rgb(219, 233, 246);
+}
+.container{
+    display: flex;
+}
+nav{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    width: 280px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.573);
+    background-color: white;
+}
+.logo{
+    text-align: center;
+    display: flex;
+    margin: 10px 0 0 10px;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    
+}
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+a{
+    position: relative;
+    color: black;
+    font-size: 14px;
+    display: table;
+    width: 280px;
+    padding: 10px;
+    transition-duration: 0.4s;
+}
+nav .fas{
+    position: relative;
+    height: 40px;
+    width: 70px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+
+}
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px; 
+    
+}
+
+a:hover{
+    background: rgb(225, 88, 88);
+}
+.lg{
+    position:absolute;
+    bottom: 0;
+}
+/* CARD */
+.main{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+.top{
+    display: flex;
+    width: 100%;
+}
+.product{
+    display: flex;
+    margin-top: 20px;
+}
+.product .card{
+    width: 25%;
+    margin: 10px;
+   background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.612);
+}
+.product .card h3{
+    margin: 10px;
+    text-transform: capitalize;
+}
+.product .card button{
+    background-color: brown;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 10px;
+     margin-top: 15px;
+     cursor: pointer;
+}
+.product .card button:hover{
+    background: orangered;
+}

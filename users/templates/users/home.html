@@ -1,0 +1,98 @@
+{% extends "users/base.html" %}
+{% block title %} Home Page {% endblock title%}
+{% block content %}
+    
+    {% if user.is_authenticated %}
+    <div class="welcome">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3 class="animate-charcter">Welcome Back,{{user.first_name.title|default:'Sir'}}</h3>
+        </div>
+      </div>
+    </div>
+            <div class="container1">
+                <nav>
+                  <ul>
+                    <li style="padding-bottom: 20px;">
+                      <a href="" class="logo">
+                        <img src="../../../static/css/logo.png" alt="">
+                        <span class="nav-item" style="color: orange;">DashBoard</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{% url 'users-profile' %}">
+                        <i class="fas fa-user" style="color: black;"></i>
+                        <span class="nav-item" style="color: black;">{{user.first_name.title|default:'Profile'}}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/additem" style="text-decoration: none; color: black;">
+                        <i class="fas fa-product-hunt"></i>
+                        <span class="nav-item">Manage Products</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/vendor" style="text-decoration: none; color: black;">
+                        <i class="fas fa-info"></i>
+                        <span class="nav-item">Vendor's Info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/brand" style="text-decoration: none; color: black;">
+                        <i class="fas fa-network-wired"></i>
+                        <span class="nav-item">Brands</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/help" style="text-decoration: none; color: black;">
+                        <i class="fas fa-question-circle"></i>
+                        <span class="nav-item">FAQ</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{% url 'logout' %}" class="lg" style="text-decoration: none; color: black;">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="nav-item">Logout</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <section class="main">
+                  <div class="top">
+                    <h1>SUMMERY</h1>
+                  </div>
+                  <div class="product">
+                    <div class="card">
+                      <h3>Total Products</h3>
+                      <h1>{{item_list|length}}</h1>
+                      <a  href="/product"><button>Available Product</button></a>
+                    </div>
+                    <div class="card">
+                      <h3>Total Sell</h3>
+                      <h1>{{total}}</h1>
+                      <a href="/sellitem"><button>Sell Data</button></a>
+                    </div>
+                    <div class="card">
+                      <h3 style="margin-top: 34px;">Payable Vat(15%)</h3>
+                      <h1>{{vat}}</h1>
+                      <!--<a href="/order"><button>Details</button></a>-->
+                    </div>
+                  </div>
+                </section>
+              </div>
+            {% else %}
+            <div class="welcomePage">
+              <div class="welcomePage2">
+                  <div class="text">
+                      <h1 style="text-align: center;">Hello & Welcome</h1>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quam facilis laboriosam, autem perspiciatis delectus, quibusdam odio dignissimos perferendis optio dicta deleniti minus accusantium quaerat nulla blanditiis ducimus porro ad.</p>
+                  </div>
+                  <div class="btn">
+                      <button><a style="font-size: 22px; color: black; text-decoration: none;" href="{% url 'login' %}">Sign In</a></button>
+                  </div>
+              </div>
+            </div>
+                <!--<button class="btn btn-success" style="margin-left: 620px;margin-top: 50px;"><a style="color: aliceblue; font-size: larger; text-decoration: none;" href="{% url 'login' %}" role="button">Sign in</a></button>-->
+            {% endif %}
+
+{% endblock content %}
